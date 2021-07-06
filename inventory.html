@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,500,600&Cinzel">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/style2.css">
+    <style type="text/css">
+    body{
+        background-color: black;
+
+    }
+    .nav-bar{
+        background-color: black;
+        height: 130px;
+    }
+         .hero
+         {
+             height: 100vh;
+             width: 100%;
+             background-color:black;
+             background-size: cover;
+             background-position: center;
+             position: relative;
+             overflow-x: hidden;
+             margin-bottom: 100px;
+
+         }
+         .highway{
+             height: 200px;
+             width: 500%;
+             display: block;
+             background-image: url('images/road.jpg');
+             position: absolute;
+             bottom: 0;
+             left: 0;
+             right: 0;
+             z-index: 1;
+             background-repeat: repeat-x;
+             animation: highway 5s linear infinite;
+         }
+         @keyframes highway
+         {
+             100%{
+                 transform: translateX(-3400px);
+             }
+         }
+
+         .city{
+             height: 250px;
+             width:500%;
+             background-image: url('images/city.png');
+             position: absolute;
+             bottom: 200px;
+             left: 0;
+             right: 0;
+             display: block;
+             z-index: 1;
+             background-repeat: repeat-x;
+             animation: city 20s linear infinite;
+
+         }
+
+         @keyframes city
+         {
+             100%{
+                 transform: translateX(-1400px);
+             }
+
+         }
+
+         .car{
+             width: 400px;
+             left:50%;
+             bottom:100px;
+             transform: translateX(-50%);
+             position: absolute;
+             z-index: 2;
+
+         }
+         .car img{
+             width:100%;
+             animation: car 1s linear infinite;
+         }
+         @keyframes car{
+             100%{
+                 transform: translateY(-1px);
+             }
+             50%{
+                transform: translateY(1px);
+             }
+             0%{
+                transform: translateY(-1px);
+             }
+         }
+         .wheel{
+             left: 50%;
+             bottom: 178px;
+             transform: translateX(-50%);
+             position:absolute;
+             z-index: 2;
+         }
+         .wheel img{
+             width: 72px;
+             height: 72px;
+             animation: wheel 1s linear infinite;
+
+         }
+         .back-wheel{
+             left:-135px;
+             position: absolute;
+
+         }
+         .front-wheel{
+             left:80px;
+             position: absolute;
+
+         }
+         @keyframes wheel{
+             100%{
+                 transform: rotate(360deg);
+             }
+         }
+         .color-overlay{
+            position: absolute;
+            top: 0;
+            left:0;
+            width: 100%;
+            height: 100vh;
+            opacity: 0.2;
+        }
+        .hero h1{
+            text-align: center;
+            font-size: 100px;
+            font-family: 'Raleway', sans-serif;
+            color: white;
+            z-index: 1;
+            opacity: 1;
+        }
+        
+        #wrap {
+        width: 80%;
+        color: white;
+        margin: auto;
+        overflow: hidden;
+        padding-top: 0px;
+        font-family: 'Raleway', sans-serif;
+        font-size: 20px;
+        text-align: justify;
+        padding-left: 80px;
+        padding-right: 80px;
+        padding-bottom: 80px;
+        border: #fff;
+        }
+        * {
+       box-sizing: border-box;
+        }
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+ 
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.image{
+    width: 50%;
+    height: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+   
+    
+}
+           .header{
+                width: 100%;
+                background-color: rgba(0,0,0,.2);
+                padding-top: 10px;
+            }
+
+            .header ul{
+                text-align: center;
+            }
+
+            .header ul li{
+                list-style: none;
+                display: inline-block;
+            }
+
+            .header ul li a{
+                display: block;
+                text-decoration: none;
+                text-transform: uppercase;
+                color: #fff;
+                font-size: 20px;
+                font-family: 'Raleway', sans-serif;
+                letter-spacing: 2px;
+                font-weight: 600;
+                padding: 10px;
+
+                transition: all ease 0.5s;
+            }
+
+            .header ul li a:hover{
+                background-color: #211b4385;
+
+            }
+            
+        
+    </style>
+</head>
+<body>
+    <div class="nav-bar" style="padding-left: 0px;">
+        <!-- <span onclick="showMenu()" style="cursor: pointer;"><i class="fa fa-bars fa-2x"  style="color: white;margin-left: 30px;"></i></span> -->
+      
+        <div class="nav-logo">
+      
+        <a href="home.html"><img src="./images/logonew.png" /></a>  
+        </div>
+              <div class="nav-links" id="nav-links">
+              <a onclick="closeMenu()"><i class="fa fa-close" ></i></a>  
+                <ul>
+                  <a href="./home.html"><li>HOME</li></a>
+                  <a href="inventory.html"><li>INVENTORY</li></a>
+                  <a href="log1.html"><li>LOG BOOK</li></a>
+                </ul>
+                <a href="login.php"><button type="button" class="btn">LOG IN</button> </a>
+            </div>
+      </div>
+    <div class="hero">
+        <h1>Inventory</h1>
+        <div class="highway"></div>
+        <div class="color-overlay"></div>
+        <div class="city"></div>
+        <div class="car">
+            <img src="./images/truck1.png">
+        </div>
+        <div class="wheel">
+            <img src="./images/wheel.png" class="back-wheel">
+            <img src="./images/wheel.png" class="front-wheel">
+        </div>
+
+    </div>
+</div>
+   
+    <div  id="wrap">
+        <h1>All About Inventory</h1>
+    <p>Inventory is the term for the goods available for sale and raw materials used to produce goods available for sale. Inventory represents one of the most important assets of a business because the turnover of inventory represents one of the primary sources of revenue generation. Thus, the Inventory Management feature of our Website allows users to keep a track of their most prized possessions. Due to improved ordering accuracy, efficiency, and product flow, good inventory management results in saved time and money. Effective inventory management and control protects from incorrect or damaged goods being shipped to customers</p>
+    <br><br>
+    <div class="row">
+        <div class="column" >
+          <h2>View Inventory</h2>
+          <p>Our website allows you to easily view your inventory. It will help you to know when to refill your stock or assist you in maintaining the essentials. Your employee too, can view the inventory before informing the customer of the availability of a certain item. </p>
+        </div>
+        <div class="column">
+          <h2>Manage Inventory</h2>
+          <p>SoulFarm also allows you to update and manage the inventory. Once the bill has been generated for a particular customer, the stock of the inventory automatically gets reduced based on the purchase. For fresh supply, you can also add the inventory manually. </p>
+        </div>
+
+        <img src="https://images.pexels.com/photos/906494/pexels-photo-906494.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940.jpg" alt="" style="width:75%;height: 75%;margin-left: 200px;">
+    
+      </div>
+
+</div>
+
+<div style="text-align: right;">
+<div id="google_translate_element"></div>
+<span><script type="text/javascript">
+//<![CDATA[
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+}
+//]]>
+</script>
+<!-- <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
+</script></span></div>
+</body>
